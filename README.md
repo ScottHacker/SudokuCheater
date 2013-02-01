@@ -244,7 +244,7 @@ Now we go back to the "FindDuplicatePencilMarks" function.  We'll have ran "Dupl
 Now that we're done with that and back in the "Markup" function, I use the pencil marks to do all the logic to figure out numbers.  All these functions will return true if they find anything, and false if they don't.  This will become our return value, since if the function couldn't find any new numbers, then it effectively can't solve the puzzle at all.  If it can, then it'll repeat the function with the new numbers in the hopes of finding more.
 
 
-            return FindSingles(ref puzzle, pencilMarks) &#124; FindNegativeSingles(ref puzzle, pencilMarks);
+            return FindSingles(ref puzzle, pencilMarks) | FindNegativeSingles(ref puzzle, pencilMarks);
 
 
 Next is the "FindSingles" function.  This, very simply, looks through the pencil-marks and see if any of them have only one pencil-mark in their array.  If that's the case, then that pencil-mark is obviously the correct number for that spot, so we pen it in the official puzzle array and return true.
